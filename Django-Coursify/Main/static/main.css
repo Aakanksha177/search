@@ -5833,3 +5833,26 @@ nav {
   position: relative;
   height: 100vh; }
 
+
+  .container {
+    position: relative;
+    width: 100%;
+  }
+  
+  /* Make the image responsive */
+  .container img {
+    display: block;
+    position: relative;
+  }
+  
+  /* Style the button and place it in the middle of the container/image */
+  .container i {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    align-content: center;
+  }
+  
+  .container i:hover {
+    color: black;
+  }
