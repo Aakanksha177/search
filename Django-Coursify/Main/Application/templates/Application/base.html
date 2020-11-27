@@ -1,0 +1,234 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coursify</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="icon" href="{% static 'images/logo.png' %}" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark indigo">
+        <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'images/favicon.png' %}" alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'live' %}">Live Classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'boardexams' %}">Video Library</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'course' %}">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'book' %}">Book</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'board' %}" style="margin-right: 6.5rem;">Board</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}{% endblock %}
+
+    <footer id="section-footer" class="container-fluid">
+        <img class="footer-logo" src="{% static 'images/favicon.png' %}" alt="">
+        <h1 class="footer-heading">Quick Links</h1>
+        <div class="footer-item">
+            <a class="footer-link" href="">Courses</a>
+            <a class="footer-link" href="">Live Classes</a>
+            <a class="footer-link" href="">State Boards</a>
+            <a class="footer-link" href="">Solved Books</a>
+        </div>
+        <div class="footer-item1">
+            <a class="footer-link1" href="">NEET</a>
+            <a class="footer-link1" href="">ICSE</a>
+            <a class="footer-link1" href="">NCERT</a>
+            <a class="footer-link1" href="">CBSE</a>
+            <a class="footer-link1" href="">JEE</a>
+        </div>
+        <div class="footer">
+
+            <h1 class="footer__heading">Contact:</h1>
+
+            <div class="footer__box">
+                <div class="footer__box--call">
+                    <img class="footer__box--call-img" src="{% static 'images/phone.png' %}" alt="">
+                    <p class="footer__box--call-para">Coursify@gmail.com</p>
+                </div>
+    
+                <div class="footer__box--social">
+                    <img class="footer__box--social-img" src="{% static 'images/facebook.png' %}" alt="">
+                    <img class="footer__box--social-img" src="{% static 'images/instagram.png' %}" alt="">
+                    <img class="footer__box--social-img" src="{% static 'images/youtube.png' %}" alt="">
+                    <img class="footer__box--social-img" src="{% static 'images/linkedin.png' %}" alt="">
+                </div>
+    
+                <div class="footer__box--call fbox-call">
+                    <img class="footer__box--call-img" src="{% static 'images/email.png' %}" alt="">
+                    <p class="footer__box--call-para">Coursify@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <footer id="section-footer1" class="container-fluid">
+        <div class="footer1-connect">
+            <h3 class="footer1-connect--text">Connect with us 
+                <img class="footer1-connect--text-img" src="{% static 'images/facebook.png' %}" alt=""> 
+                <img class="footer1-connect--text-img" src="{% static 'images/instagram.png' %}" alt=""> 
+                <img class="footer1-connect--text-img" src="{% static 'images/youtube.png' %}" alt=""> 
+                <img class="footer1-connect--text-img" src="{% static 'images/linkedin.png' %}" alt=""> 
+            </h3>
+            <h3 class="footer1-connect--text1">Contact 
+                <img class="footer1-connect--text1-img" src="{% static 'images/email.png' %}" alt=""> 
+                <span>Coursify@gmail.com</span>
+            </h3>
+        </div>
+        <div class="footer1">
+            <div class="footer1__content">
+                <div class="footer1__content--ncert">
+                    <h1 class="ncert-heading">NCERT</h1>
+                    <div class="ncert-content">
+                        <h2 class="ncert-title">Class 11-12</h2>
+                        <div class="ncert-link">
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                        </div>
+                    </div>
+                    <div class="ncert-content">
+                        <h2 class="ncert-title">Class 9-10</h2>
+                        <div class="ncert-link">
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                        </div>
+                    </div>
+                    <div class="ncert-content">
+                        <h2 class="ncert-title">Class 6-8</h2>
+                        <div class="ncert-link">
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                            <a class="ncert-link--items" href="">Class 12 Physics NCERT Solutions</a>
+                        </div>
+                    </div>
+                    <h1 class="ncert-heading" style="margin-top: 2rem;">CBSE</h1>
+                    <div class="ncert-link">
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 12</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 11</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 10</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 9</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 8</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 7</a>
+                    </div>
+                    <h1 class="ncert-heading" style="margin-top: 2rem;">ICSE</h1>
+                    <div class="ncert-link">
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 12</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 11</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 10</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 9</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 8</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem; font-size:1.5rem;" href="">Class 7</a>
+                    </div>
+                    <h1 class="ncert-heading" style="margin-top: 2rem;">State Boards</h1>
+                    <div class="ncert-link">
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Uttar Pradesh Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Delhi Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Harayana Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Himachal Pradesh Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Bihar Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Jarkhand Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">madhya Pradesh Board</a>
+                        <a class="ncert-link--items" style="margin-right: 2rem;font-size:1.5rem;" href="">Chhattishgarh Board</a>
+                    </div>
+                    <h1 class="ncert-heading" style="margin-top: 2rem;">Reference Books</h1>
+                    <div class="ncert-content">
+                        <h2 class="ncert-title">Class 11-12</h2>
+                        <div class="ncert-link">
+                            <a class="ncert-link--items" href="">HC Verma Solutions class 12 Physics</a>
+                            <a class="ncert-link--items" href="">M S Chouhan Class 12 Chemistry</a>
+                            <a class="ncert-link--items" href="">K C Sinha Class 12 Maths</a>
+                            <a class="ncert-link--items" href="">Errorless Class 12 Biology</a>
+                            <a class="ncert-link--items" href="">HC Verma Solutions class 11 Physics</a>
+                            <a class="ncert-link--items" href="">M S Chouhan Class 11 Chemistry</a>
+                            <a class="ncert-link--items" href="">K C Sinha Class 11 Maths</a>
+                            <a class="ncert-link--items" href="">Errorless Class 11 Biology</a>
+                        </div>
+                    </div>
+                    <div class="ncert-content">
+                        <h2 class="ncert-title">Class 9-10</h2>
+                        <div class="ncert-link">
+                            <a class="ncert-link--items" href="">RD Sharma Class 10 Maths</a>
+                            <a class="ncert-link--items" href="">RS Agarwal Class 10 Maths</a>
+                            <a class="ncert-link--items" href="">Exampler Class 10 Science</a>
+                            <a class="ncert-link--items" href="">Lakmir Singh Class 10 Science</a>
+                            <a class="ncert-link--items" href="">RD Sharma Class 9 Maths</a>
+                            <a class="ncert-link--items" href="">RS Agarwal Class 9 Maths</a>
+                            <a class="ncert-link--items" href="">Exampler Class 9 Science</a>
+                            <a class="ncert-link--items" href="">Lakmir Singh Class 9 Science</a>
+                        </div>
+                    </div>
+                    <div class="ncert-content">
+                        <h2 class="ncert-title">Class 6-8</h2>
+                        <div class="ncert-link">
+                            <a class="ncert-link--items" href="">RD Sharma Class 8 Maths</a>
+                            <a class="ncert-link--items" href="">RS Agarwal Class 8 Maths</a>
+                            <a class="ncert-link--items" href="">Exampler Class 8 Science</a>
+                            <a class="ncert-link--items" href="">RD Sharma Class 7 Maths</a>
+                            <a class="ncert-link--items" href="">RS Agarwal Class 7 Maths</a>
+                            <a class="ncert-link--items" href="">Exampler Class 7 Science</a>
+                            <a class="ncert-link--items" href="">RD Sharma Class 6 Maths</a>
+                            <a class="ncert-link--items" href="">RS Agarwal Class 6 Maths</a>
+                            <a class="ncert-link--items" href="">Exampler Class 6 Science</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer1__img">
+                <!-- Contact <img src="images/" alt=""> -->
+                <img class="footer1__img--logo" src="{% static 'images/favicon.png' %}" alt="">
+                <h3 class="footer1__img--text">Clarify your Doubts.</h3>
+                <h3 class="footer1__img--text">In your Language.</h3>
+
+                <h4 class="footer1__img--links">Quick Links</h4>
+                <a class="footer1__img--items" href="">About US</a>
+                <a class="footer1__img--items" href="">Careers</a>
+                <a class="footer1__img--items" href="">Press Releases</a>
+                <a class="footer1__img--items" href="">Provacy</a>
+                <a class="footer1__img--items" href="">About US</a>
+            </div>
+            
+        </div>
+    </footer>
+    
+    <script src="{% static 'main.js' %}"></script>
+    <script src="{% static 'app.js' %}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>

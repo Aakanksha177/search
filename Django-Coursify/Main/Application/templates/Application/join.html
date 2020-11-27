@@ -1,0 +1,51 @@
+{% extends 'Application/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'main.css' %}">
+    <section id="section-join" class="container-fluid">
+        <img class="join-img1" src="{% static 'images/ellipses.png' %}" alt="">
+        <img class="join-img2" src="{% static 'images/ellipse.png' %}" alt="">
+        <img class="join-img3" src="{% static 'images/ellipses.png' %}" alt="">
+        <img class="join-img4" src="{% static 'images/ellipses.png' %}" alt="">
+        <img class="join-img5" src="{% static 'images/ellipses.png' %}" alt="">
+        <div class="join">
+            <img class="join__img" src="{% static 'images/group.jpg' %}" alt="">
+            <div class="join__content">
+                <h2 class="join__content--title">Join Us at <span>Coursify</span></h2>
+                <h4 class="join__content--sub"><img class="join__content--sub-img" src="{% static 'images/tick.png' %}" alt="">  Join a growing Startup</h4>
+                <h4 class="join__content--sub"><img class="join__content--sub-img" src="{% static 'images/tick.png' %}" alt="">  Create an impact in the Team</h4>
+                <h4 class="join__content--sub"><img class="join__content--sub-img" src="{% static 'images/tick.png' %}" alt="">  display your Achievements</h4>
+                <h4 class="join__content--sub"><img class="join__content--sub-img" src="{% static 'images/tick.png' %}" alt="">  Boost your Career Growth</h4>
+                <button class="join__content--btn">View All opportunities</button>
+            </div>
+
+            <div class="join__images">
+                <div class="join__images--box">
+                    <img class="join__images--box-item" src="{% static 'images/teach1.jpg' %}" alt="">
+                    <h2 class="join__images--box-text">Impact <span>Millions</span> of Lives</h2>
+                </div>
+                <div class="join__images--box">
+                    <img class="join__images--box-item" src="{% static 'images/teach2.jpg' %}" alt="">
+                    <h2 class="join__images--box-text"><span>10X Growth</span> of the Company</h2>
+                </div>
+                <div class="join__images--box">
+                    <img class="join__images--box-item" src="{% static 'images/teach3.jpg' %}" alt="">
+                    <h2 class="join__images--box-text"> <span>Embrace the</span> Startup Culture</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="join__us">
+            <img class="join__us--img" src="{% static 'images/help.png' %}" alt="">
+            <div class="join__us--content">
+                <h1 class="join__us--content-heading">Join Us and Start your <span>Growth Journey!</span> </h1>
+                <p class="join__us--content-para">We are looking for the best minds to Join our Team</p>
+                <button class="join__us--content-btn">View All Opportunities</button>
+            </div>
+        </div>
+        
+    </section>
+
+   
+{% endblock %}

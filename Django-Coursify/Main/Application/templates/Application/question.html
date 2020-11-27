@@ -1,0 +1,99 @@
+{% extends 'Application/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section id='section-question' class="container-fluid">
+        <img class="question-img1" src="{% static 'images/ellipses.png' %}" alt="">
+        <img class="question-img2" src="{% static 'images/ellipse.png' %}" alt="">
+        <img class="question-img3" src="{% static 'images/ellipses.png' %}" alt="">
+        <div class="question">
+            <h1 class="question__heading">Class 9th > Maths > NCERT > <span>Chapter 1</span></h1>
+            <h3 class="question__subheading">Exercise 1.1 > <span>Question 2</span> </h3>
+            <p class="question__para">{{title}}</p>
+            <div class="question__content">
+                <!-- <img class="question__content--img" src="{% static 'images/tablet.png' %}" alt=""> -->
+                <div class="card" style="width: 70%; height: 240%; border-radius: 2%;">
+                    <iframe style="padding: 4% 6% 4% 6%; height:100%;" class="bd-placeholder-img card-img-top rounded"  src="{{link}}?modestbranding=0;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                
+
+                <div class="question__content--icon">
+                    
+                    <div class="question__content--icon-eye">
+                        <img class="question__content--icon-eye-img" src="{% static 'images/eye.png' %}" alt="">
+                        <h3 class="question__content--icon-eye-value">2289</h3>
+                    </div>
+                    <div class="question__content--icon-like">
+                        <img class="question__content--icon-like-img" src="{% static 'images/like.png' %}" alt="">
+                        <h3 class="question__content--icon-like-value">1545</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="question__btn">Back to Excercise Page</button>
+            
+            <div class="question1">
+                <h1 class="question1__heading">Excercise <span>Questions</span></h1>
+                <div class="question1__content">
+                    <div class="question1__content--img">
+                        <img class="question1__content--img-image" src="{% static 'images/arora.png' %}" alt="">
+                        <h3 class="question1__content--img-text">Q2</h3>
+                    </div>
+                    <div class="question1__content--img">
+                        <img class="question1__content--img-image" src="{% static 'images/arora.png' %}" alt="">
+                        <h3 class="question1__content--img-text">Q2</h3>
+                    </div>
+                    <button class="question1__content--previous">< <span>Previous Question</span> </button>
+                    <button class="question1__content--next"> <span>Next Question</span> ></button>
+                </div>
+            </div>
+
+            <div class="viewed">
+                <h1 class="viewed__heading">Most Viewed <span>Questions</span> </h1>
+                <div class="viewed__content">
+                    <button class="viewed__content--back"><</button>
+                    <div class="chips">
+                        <div class="chips__box">
+                            <div class="chips__box--item chips__box--green">
+                                <img class="chips__box--item-img" src="{% static 'images/pradeep.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q1</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--pink">
+                                <img class="chips__box--item-img" src="{% static 'images/arora.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q2</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--orange">
+                                <img class="chips__box--item-img" src="{% static 'images/sinha.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q3</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--blue">
+                                <img class="chips__box--item-img" src="{% static 'images/ncert.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q4</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--green">
+                                <img class="chips__box--item-img" src="{% static 'images/pradeep.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q1</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--pink">
+                                <img class="chips__box--item-img" src="{% static 'images/arora.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q2</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--orange">
+                                <img class="chips__box--item-img" src="{% static 'images/sinha.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q3</h4>
+                            </div>
+                            <div class="chips__box--item chips__box--blue">
+                                <img class="chips__box--item-img" src="{% static 'images/ncert.png' %}" alt="">
+                                <h4 class="chips__box--item-title">Q4</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="viewed__content--next">></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock content %}
